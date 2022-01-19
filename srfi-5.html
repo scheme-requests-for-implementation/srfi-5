@@ -164,7 +164,7 @@ For clarity and convenience, an informal specification follows.
 </p>
 
 <ol>
-<li>Unnamed
+<li id="unnamed">Unnamed
 
 <p><pre>
 (let ((&lt;parameter&gt; &lt;argument&gt;)...) 
@@ -172,7 +172,7 @@ For clarity and convenience, an informal specification follows.
 </pre>
 </li>
 
-<li>
+<li id="named-non-sig">
 Named, non-signature-style, no rest argument
 
 <p><pre>
@@ -181,7 +181,7 @@ Named, non-signature-style, no rest argument
 </pre>
 </li>
 
-<li>Named, signature-style,  no rest argument
+<li id="named-sig">Named, signature-style,  no rest argument
 
 <p><pre>
 (let (&lt;name&gt; (&lt;parameter&gt; &lt;argument&gt;)...)
@@ -189,7 +189,7 @@ Named, non-signature-style, no rest argument
 </pre>
 </li>
 
-<li>Named, non-signature-style, rest argument
+<li id="named-non-sig-rest">Named, non-signature-style, rest argument
 
 <p><pre>
 (let &lt;name&gt; ((&lt;parameter&gt; &lt;argument&gt;)...
@@ -198,7 +198,7 @@ Named, non-signature-style, no rest argument
   &lt;body&gt;...)
 </pre>
 
-<li>Named, signature-style, rest argument
+<li id="named-sig-rest">Named, signature-style, rest argument
 
 <p><pre>
 (let (&lt;name&gt; (&lt;parameter&gt; &lt;argument&gt;)...
