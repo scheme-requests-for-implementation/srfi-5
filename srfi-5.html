@@ -1,22 +1,19 @@
 <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 3.2//EN">
-<html>
+<html lang="en">
 <head>
    <meta charset="utf-8" />
    <title>SRFI 5: A compatible let form with signatures and rest arguments</title>
    <meta name="viewport" content="width=device-width, initial-scale=1" />
-   <link rel="stylesheet" href="/srfi.css" type="text/css" />
+   <link rel="stylesheet" href="https://srfi.schemers.org/srfi.css" type="text/css" />
+   <link href="/favicon.png" rel="icon" sizes="192x192" type="image/png">
 </head>
 <body>
 
-<H1>Title</H1>
+<h1><a href="https://srfi.schemers.org/"><img class="srfi-logo" src="https://srfi.schemers.org/srfi-logo.svg" alt="SRFI surfboard logo" /></a>5: A compatible <code>let</code> form with signatures and rest arguments</h1>
 
-A compatible <code>let</code> form with signatures and rest arguments
+<p>by Andy Gaynor</p>
 
-<H1>Author</H1>
-
-Andy Gaynor
-
-<H1>Status</H1>
+<h2 id="status">Status</h2>
 
 <p>This SRFI is currently in <em>final</em> status.  Here is <a href="https://srfi.schemers.org/srfi-process.html">an explanation</a> of each status that a SRFI can hold.  To provide input on this SRFI, please send email to <code><a href="mailto:srfi+minus+5+at+srfi+dotschemers+dot+org">srfi-5@<span class="antispam">nospam</span>srfi.schemers.org</a></code>.  To subscribe to the list, follow <a href="https://srfi.schemers.org/srfi-list-subscribe.html">these instructions</a>.  You can access previous messages via the mailing list <a href="https://srfi-email.schemers.org/srfi-5">archive</a>.</p>
 <UL>
@@ -26,7 +23,7 @@ Andy Gaynor
 <LI>Revised reference implementation: 2003-01-27
 </UL>
 
-<H1>Abstract</H1>
+<h2 id="abstract">Abstract</h2>
 
 The <i>named-let</i> incarnation of the <code>let</code> form has two slight
 inconsistencies with the <code>define</code> form.  As defined, the <code>let</code>
@@ -36,9 +33,9 @@ signature-style syntax, an issue of aesthetics and consistency.  Both
 issues are addressed here in a manner which is compatible with the traditional
 <code>let</code> form but for minor extensions.
 
-<H1>Rationale</H1>
+<h2 id="rationale">Rationale</h2>
 
-<H2>Signature-style Syntax</H2>
+<h3>Signature-style Syntax</h3>
 
 Consider the following two equivalent definitions:
 
@@ -85,7 +82,7 @@ the binding section.  As presented, this straightforward extension
 introduces no ambiguity or incompatibility with the existing definition
 of let.
 
-<H2>Rest Arguments</H2>
+<h3>Rest Arguments</h3>
 
 As it stands, one cannot write a named let with rest arguments, as in
 
@@ -117,7 +114,7 @@ There are several times when the author has used this construct in practice.
 Regardless, there is little reason to deny the <code>let</code> form access to
 all the features of lambda functionality.
 
-<H2>Symbols in Binding Sections</H2>
+<h3>Symbols in Binding Sections</h3>
 
 Both the features above rely upon the placement of symbols in <code>let</code>
 binding lists (this statement is intentially simplistic).  The only
@@ -132,9 +129,9 @@ presented above, and an alternate syntax is immediately apparent, as
 in <code>(let ((foo) (bar) (baz)) ...)</code> This may even
 be preferable, consistently parenthesizing normal binding clauses.
 
-<H1>Specification</H1>
+<h2 id="specification">Specification</h2>
 
-<H2>Syntax</H2>
+<h3>Syntax</h3>
 
 <p>
 A formal specification of the syntax follows.  Below, body, expression,
@@ -209,7 +206,7 @@ Named, non-signature-style, no rest argument
 </li>
 </ol>
 
-<H2>Semantics</H2>
+<h3>Semantics</h3>
 
 Let <code>$lambda</code> and <code>$letrec</code> be hygienic bindings for the <code>lambda</code>
 and <code>letrec</code> forms, respectively.
@@ -243,7 +240,7 @@ and <code>letrec</code> forms, respectively.
 </li>
 </ul>
 
-<H1>Implementation</H1>
+<h2 id="implementation">Implementation</h2>
 
 Here is an implementation using <code>SYNTAX-RULES</code>.
 
@@ -318,7 +315,7 @@ Here is an implementation using <code>SYNTAX-RULES</code>.
 </pre>
 
 
-<H1>Copyright</H1>
+<h2 id="copyright">Copyright</h2>
 
 Copyright (C) Andy Gaynor (1999). All Rights Reserved.
 <p>This document and translations of it may be copied and furnished to
